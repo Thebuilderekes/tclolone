@@ -1,4 +1,4 @@
-import { ColumnContainer, ColumnTitle } from "./styles"
+import { ColumnContainer, ColumnTitle } from "../styles/Styles.tsx"
 import { FC } from 'react'
 
 type ColumnProps = React.PropsWithChildren<{

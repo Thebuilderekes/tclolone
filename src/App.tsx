@@ -1,10 +1,13 @@
 import "./App.css";
 import { AppContainer } from "./styles/Styles.tsx";
+import { AddNewItem } from "./components/AddNewItem.tsx";
+// import Column from "./components/Column.tsx";
+// import { Card } from "./components/Card.tsx";
 function App() {
   return (
     <>
       <AppContainer>
-
+        <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log("add new item button is working")} />
         columns will go here
       </AppContainer>
     </>

@@ -1,6 +1,4 @@
-import { CardContainer } from "./styles";
-
-
+import { CardContainer } from "../styles/Styles"
 type CardProps = {
   text: string
 }
