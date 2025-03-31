@@ -2,11 +2,11 @@
 import styled from "styled-components"
 
 export const AppContainer = styled.div`
-align-items: flex-start;
 background-color: #3179ba;
 display: flex;
 flex-direction: row;
-height: 100%;
+align-items: flex-start;
+min-height: 100vh;
 padding: 20px;
 width: 100%;
 `;
@@ -33,10 +33,10 @@ max-width: 300px;
 border-radius: 3px;
 box-shadow: #091e4240 0px 1px 0px 0px;
 `
+
 type AddItemButtonProps = {
   dark?: boolean
 }
-
 
 export const AddItemButton = styled.button <AddItemButtonProps> `
 background-color: #ffffff3d;
