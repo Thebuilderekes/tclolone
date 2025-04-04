@@ -1,26 +1,25 @@
 import "./App.css";
 import { AppContainer } from "./styles/Styles.tsx";
 import { AddNewItem } from "./components/AddNewItem.tsx";
- import Column from "./components/Column.tsx";
- import { Card } from "./components/Card.tsx";
- 
+import Column from "./components/Column.tsx";
+import { useAppState } from "./state/AppStateContext";
+import { addList } from "./state/action.ts";
 function App() {
+const {lists, dispatch} = useAppState()
   return (
     <>
       <AppContainer>
-         <Column text="To Do">
-            <Card text="Generate app scaffold" />
-         </Column>
-         <Column text="In Progress">
-             <Card text="Learn Typescript" />
-         </Column>
-         <Column text="Done">
-             <Card text="Begin to use static typing" />
-         </Column> 
-        <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log("add new item button is working")} />
+        {lists.map((list) => (
+          <Column text={list.text} key={list.id} id={list.id} />
+        ))}
+        <AddNewItem
+          dark={false}
+          toggleButtonText="+ Add another list"
+         onAdd={text => dispatch(addList(text))} 
+        />
         columns will go here
-     </AppContainer>
-   </>
+      </AppContainer>
+    </>
   );
 }
 

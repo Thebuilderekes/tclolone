@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+testcode.js
+questions_for_ai.md
 dist
 dist-ssr
 *.local
